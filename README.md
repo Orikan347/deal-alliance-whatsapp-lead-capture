@@ -4,7 +4,7 @@
 
 ## 先做一次：安裝到 Chrome
 
-1. 下載 `成交聯盟WhatsApp抓名單Chrome擴充元件.zip`。
+1. 下載 `成交聯盟WhatsApp抓名單Chrome擴充元件_v0.3.2.zip`。
 2. 對 ZIP 按兩下解壓縮。
 3. 用 Chrome 打開 `chrome://extensions/`。
 4. 開啟右上角「開發人員模式」。
