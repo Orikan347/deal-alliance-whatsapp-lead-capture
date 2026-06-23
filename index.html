@@ -90,6 +90,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
+    .guide {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
     .step {
       padding: 18px;
       border: 1px solid var(--line);
@@ -106,6 +111,26 @@
       background: #e7f2ff;
       color: var(--blue-dark);
     }
+    .instruction-list {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--ink);
+      line-height: 1.8;
+    }
+    .instruction-list li + li { margin-top: 6px; }
+    .instruction-list strong { color: var(--blue-dark); }
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .tip {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 14px;
+    }
+    .tip strong { display: block; margin-bottom: 6px; }
     .code-box {
       width: 100%;
       min-height: 130px;
@@ -143,6 +168,8 @@
     @media (max-width: 820px) {
       .hero { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr; }
+      .guide { grid-template-columns: 1fr; }
+      .tips { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -152,7 +179,7 @@
       <div>
         <p class="eyebrow">成交聯盟名單工具箱</p>
         <h1>WhatsApp 抓名單工具</h1>
-        <p>七天試用版。下載 Chrome 擴充元件，載入後到 WhatsApp Web 點右上角工具圖示，按「一鍵抓名單」，再下載 CSV。</p>
+        <p>七天試用版。先下載 Chrome 擴充元件，照下面步驟載入一次；之後每次到 WhatsApp Web 點右上角工具圖示，按「一鍵抓名單」，再下載 CSV。</p>
         <div class="actions">
           <a class="bookmark-button" href="成交聯盟WhatsApp抓名單Chrome擴充元件.zip">下載 Chrome 擴充元件</a>
           <button type="button" data-copy>複製備用書籤程式碼</button>
@@ -170,11 +197,46 @@
     </div>
 
     <section>
-      <h2>待會照這樣操作</h2>
+      <h2>第一次先安裝一次</h2>
+      <div class="guide">
+        <div class="step">
+          <strong>1</strong>
+          <h3>下載並解壓縮</h3>
+          <ol class="instruction-list">
+            <li>按上方藍色按鈕下載 ZIP。</li>
+            <li>下載完成後，對 ZIP 按兩下解壓縮。</li>
+            <li>看到 <strong>chrome-extension</strong> 資料夾就對了。</li>
+          </ol>
+        </div>
+        <div class="step">
+          <strong>2</strong>
+          <h3>載入到 Chrome</h3>
+          <ol class="instruction-list">
+            <li>用 Chrome 打開 <strong>chrome://extensions/</strong>。</li>
+            <li>開啟右上角「開發人員模式」。</li>
+            <li>點「載入未封裝項目」。</li>
+            <li>選擇剛剛解壓縮出來的 <strong>chrome-extension</strong> 資料夾。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>每次要抓名單就這樣用</h2>
       <div class="steps">
-        <div class="step"><strong>1</strong><h3>下載並解壓縮</h3><p>下載 Chrome 擴充元件 ZIP，解壓縮到電腦裡。</p></div>
-        <div class="step"><strong>2</strong><h3>載入擴充元件</h3><p>打開 chrome://extensions/，開啟「開發人員模式」，點「載入未封裝項目」，選擇解壓縮後的資料夾。</p></div>
-        <div class="step"><strong>3</strong><h3>一鍵抓名單</h3><p>打開 WhatsApp Web，點 Chrome 右上角工具圖示。面板出現後按「一鍵抓名單」，完成後按「下載 CSV」。</p></div>
+        <div class="step"><strong>1</strong><h3>打開 WhatsApp Web</h3><p>進入聊天列表、聯絡人列表，或群組成員列表。</p></div>
+        <div class="step"><strong>2</strong><h3>點右上角工具圖示</h3><p>點 Chrome 右上角的「成交聯盟 WhatsApp 抓名單」圖示，WhatsApp 右上角會出現面板。</p></div>
+        <div class="step"><strong>3</strong><h3>下載 CSV</h3><p>按「一鍵抓名單」，等完成後按「下載 CSV」。下載的檔案會在電腦的「下載項目」。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>卡住時看這裡</h2>
+      <div class="tips">
+        <div class="tip"><strong>看不到右上角工具圖示</strong><p>點 Chrome 右上角拼圖圖示，把「成交聯盟 WhatsApp 抓名單」固定到工具列。</p></div>
+        <div class="tip"><strong>點了沒有出現面板</strong><p>先確認目前頁面是 web.whatsapp.com，重新整理 WhatsApp Web 後再點一次。</p></div>
+        <div class="tip"><strong>Chrome 說不能選 ZIP</strong><p>不要選 ZIP 檔，要先解壓縮，再選裡面的 chrome-extension 資料夾。</p></div>
+        <div class="tip"><strong>CSV 下載後要做什麼</strong><p>把 CSV 丟進原本的「名單轉通訊錄 CSV 工具」即可。</p></div>
       </div>
     </section>
 

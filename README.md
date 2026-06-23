@@ -2,6 +2,30 @@
 
 七天試用版。學生下載 Chrome 擴充元件 ZIP，載入未封裝項目後，到 WhatsApp Web 點右上角工具圖示，按「一鍵抓名單」，再下載 CSV。
 
+## 先做一次：安裝到 Chrome
+
+1. 下載 `成交聯盟WhatsApp抓名單Chrome擴充元件.zip`。
+2. 對 ZIP 按兩下解壓縮。
+3. 用 Chrome 打開 `chrome://extensions/`。
+4. 開啟右上角「開發人員模式」。
+5. 點「載入未封裝項目」。
+6. 選擇解壓縮後的 `chrome-extension` 資料夾。
+
+## 每次要抓名單時
+
+1. 打開 `https://web.whatsapp.com/`。
+2. 進入聊天列表、聯絡人列表，或群組成員列表。
+3. 點 Chrome 右上角的「成交聯盟 WhatsApp 抓名單」圖示。
+4. WhatsApp Web 右上角出現面板後，按「一鍵抓名單」。
+5. 完成後按「下載 CSV」。
+6. 把下載的 CSV 丟進原本的「名單轉通訊錄 CSV 工具」。
+
+## 卡住時
+
+- Chrome 說不能選 ZIP：不要選 ZIP，先解壓縮，再選 `chrome-extension` 資料夾。
+- 點了沒出現面板：先確認目前頁面是 `web.whatsapp.com`，重新整理 WhatsApp Web 後再點一次。
+- 看不到工具圖示：點 Chrome 右上角拼圖圖示，把工具固定到工具列。
+
 CSV 只輸出六欄：姓名、手機、公司、職稱、備註、群組 / 標籤。
 
 本頁為 GitHub Pages 靜態試用版；正式授權仍需接成交聯盟後端授權 API。
